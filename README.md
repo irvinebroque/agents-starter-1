@@ -10,6 +10,11 @@ Uses Workers AI (no API key required), with tools for weather, timezone detectio
 
 ## Quick start
 
+Use Node.js 24.22 or later in the Node.js 24 release line. This starter uses
+[Vite+](https://viteplus.dev) for development, builds, formatting, linting, and
+type checking. The toolchain is installed locally with the project dependencies;
+a global `vp` installation is optional.
+
 ```bash
 npx create-cloudflare@latest --template cloudflare/agents-starter
 cd agents-starter
@@ -34,6 +39,17 @@ Try these prompts to see the different features:
 - **"Calculate 5000 \* 3"** — approval tool (asks you before running)
 - **"Remind me in 5 minutes to take a break"** — scheduling
 - **Drop an image and ask "What's in this image?"** — vision (image understanding)
+
+## Development checks
+
+```bash
+npm run check
+npm run format
+npm run build
+```
+
+`npm run check` generates Worker types before running Vite+ checks. Keep the
+Vite alias and Vitest override aligned with the installed Vite+ release.
 
 ## Project structure
 
