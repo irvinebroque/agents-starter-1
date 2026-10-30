@@ -35,6 +35,10 @@ Try these prompts to see the different features:
 - **"Remind me in 5 minutes to take a break"** — scheduling
 - **Drop an image and ask "What's in this image?"** — vision (image understanding)
 
+## Code updates
+
+The starter uses deferred Durable Object code updates. On deploy, active agents can keep running the previous version until they hibernate, for up to 300 seconds. Updates are best effort; keep recovery state in durable storage.
+
 ## Project structure
 
 ```
